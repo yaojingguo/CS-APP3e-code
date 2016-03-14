@@ -101,9 +101,23 @@ void show_twocomp()
   /* $end show-twocomp */
 }
 
+void p2_5() 
+{
+  /* int val = 0x87654321; */
+  /* byte_pointer valp = (byte_pointer) &val; */
+  /* show_bytes(valp, 1); */
+  /* show_bytes(valp, 2); */
+  /* show_bytes(valp, 3); */
+  const char*s = "abcdef";
+  show_bytes((byte_pointer) s, strlen(s));
+}
+
 int main(int argc, char *argv[])
 {
   int val = 12345;
+
+  p2_5();
+  return;
 
   if (argc > 1) {
     if (argc > 1) {
