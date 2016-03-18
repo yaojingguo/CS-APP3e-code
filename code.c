@@ -17,8 +17,27 @@ void p2_12() {
   printf("0x%X\n", (~x & 0xFFFFFF00) | (x & 0xFF));
 }
 
+void p2_14() {
+  int x = 0x66;
+  int y = 0x39;
+
+  printf("x & y: %x\n", x & y);
+  printf("x | y: %x\n", x | y);
+  printf("~x | ~y: %x\n", ~x | ~y);
+  printf("x & !y: %x\n", x & !y);
+
+
+  printf("\n");
+
+  printf("x && y: %x\n", x && y);
+  printf("x || y: %x\n", x || y);
+  printf("!x || !y: %x\n", !x || !y);
+  printf("x && ~y: %x\n", x && ~y);
+
+}
+
 int main(int argc, char *argv[])
 {
-  p2_12();
+  p2_14();
   return 0;
 }
